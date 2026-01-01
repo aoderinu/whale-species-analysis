@@ -9,6 +9,7 @@ df = pd.read_csv("data/whales.csv")
 print(df.head(7))
 print(df.info()) 
 
+# Create a function that uses the average weights to categorize the whale species 
 def categories(weight):
     if weight < 20000:
         category = "Light" 
@@ -20,6 +21,9 @@ def categories(weight):
 
 print(categories(1000))
 
-df["size_category"]=df["avg_weight_kg"].apply(categories)
+# Create a new collumn in the data frame that lists the categories using the .apply() function
+df["size_category"] = df["avg_weight_kg"].apply(categories)
 print(df)
+
+# Count how many whale species are in each category using .value_counts()
 print(df["size_category"].value_counts())
