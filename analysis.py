@@ -38,7 +38,7 @@ print(category_counts)
 # Visualization 
 import matplotlib.pyplot as plt
 
-# Create a var chart that shows the weight categoreisa and the number of species in each category
+# Create a bar chart that shows the weight categories and the number of species in each category
 plt.bar(category_counts.index, category_counts.values)
 plt.xlabel("Categories")
 plt.ylabel("Counts")
